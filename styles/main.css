@@ -1,125 +1,85 @@
 body {
   background-color: hsl(185, 75%, 39%);
   width: 100%;
+  min-width: 375px;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
 h1 {
-  color: hsl(229, 23%, 23%);
   font-size: 18px;
-  margin: 0;
 }
 
 p {
   color: hsl(0, 0%, 59%);
-  margin: 10px;
+  font-size: 13px;
 }
 
+/* Page */
 .page-wrapper {
   width: 100%;
   height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.circles {
+  text-align: center;
 }
 
 /* Card */
-.card-wrapper {
-  width: 320px;
-  max-width: 440px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.page-wrapper>.card-wrapper {
+  position: absolute;
 }
 
-.card-wrapper>.card-head img {
-  width: 100%;
+.page-wrapper>.card-wrapper>.card-heading img {
   display: flex;
   justify-content: center;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.card-wrapper>.card-description {
+.page-wrapper>.card-wrapper>.card-body {
   width: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
 }
 
-.card-wrapper>.card-description>.profile-img img {
+.page-wrapper>.card-wrapper>.card-body>.user-img img {
   width: 100px;
   border: 5px solid white;
   border-radius: 150px;
-  display: flex;
-  justify-content: center;
   position: relative;
   top: -50px;
 }
 
-.card-wrapper>.card-description>.meta {
-  text-align: center;
+.page-wrapper>.card-wrapper>.card-body>.user-meta {
   position: relative;
-  top: -25px;
+  top: -30px;
 }
 
-.card-wrapper>.card-description>.meta p {
-  font-size: 13px;
-}
-
-.card-wrapper>.card-description>.meta span {
+.page-wrapper>.card-wrapper>.card-body>.user-meta span {
   color: hsl(0, 0%, 59%);
   font-weight: 400;
 }
 
-.page-wrapper>.card-wrapper>.card-statistic {
+.page-wrapper>.card-wrapper>.user-statistic {
   background-color: white;
-  border-top: 1px solid hsl(0, 0%, 59%, 0.3);
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top: 1px solid hsl(227, 10%, 46%, 0.2);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
-  padding: 30px 40px 15px 40px;
+  justify-content: space-around;
+  padding: 15px 30px 15px 30px;
 }
 
-.card-wrapper>.card-statistic p {
+.page-wrapper>.card-wrapper>.user-statistic p {
   font-size: 11px;
   letter-spacing: 1px;
-  margin-top: 5px;
 }
-
-/* Credits */
-.credits p {
-  color: white;
-  font-size: 13px;
-  margin: 15px;
-}
-
-@media screen and (min-width: 375px) {
-  .circles>.top {
-    position: absolute;
-    bottom: 50%;
-    right: 50%;
-  }
-  .circles>.bottom {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-}
-
-@media screen and (min-width: 756px) {}
