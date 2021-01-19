@@ -1,5 +1,9 @@
 body {
   background-color: hsl(185, 75%, 39%);
+  background-image: url('../media/background/bg-pattern-top.svg'), url('../media/background/bg-pattern-top.svg');
+  background-size: 100%;
+  background-position: right 50vw bottom calc(50vh + 25%), left 50vw top calc(50vh + 25%);
+  background-repeat: no-repeat;
   width: 100%;
   min-width: 375px;
   height: 100%;
